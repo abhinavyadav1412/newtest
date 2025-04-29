@@ -11,7 +11,7 @@ import {
 import PropTypes from "prop-types";
 import { motion, useAnimation, useInView } from "framer-motion";
 import "./Service13.css";
-
+import serviceImage from "../images/serviceimage.jpg"
 const serviceList = [
   {
     color: "#3b82f6", // blue
@@ -145,18 +145,20 @@ const Service13 = () => {
           </div>
 
           <motion.div
-            className="image-column"
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={controls}
-          >
-            <div
-              className="service-image"
-              style={{
-                backgroundImage:
-                  "url(https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80)",
-              }}
-            ></div>
-          </motion.div>
+  className="image-column"
+  initial={{ scale: 0.8, opacity: 0 }}
+  animate={controls}
+    >
+  <div
+    className="service-image"
+    style={{
+      backgroundImage: `url(${serviceImage})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
+    }}
+  ></div>
+</motion.div>
 
           <div className="service-column">
             {serviceList.slice(3, 6).map((service, i) => (
